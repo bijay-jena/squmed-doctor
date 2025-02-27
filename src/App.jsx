@@ -11,6 +11,7 @@ import {moderateScale} from 'react-native-size-matters';
 import {AuthNavigator, UnauthNavigator} from './navigation';
 import {persistor, store} from './store';
 import {PersistGate} from 'redux-persist/integration/react';
+import {ZegoCallInvitationDialog} from '@zegocloud/zego-uikit-prebuilt-call-rn';
 
 const toastConfig = {
   success: props => (
@@ -70,6 +71,7 @@ const App = () => {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <NavigationContainer>
+            <ZegoCallInvitationDialog />
             <StackSelector />
           </NavigationContainer>
           <Toast config={toastConfig} />

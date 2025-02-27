@@ -12,8 +12,8 @@ import {
   Keyboard,
 } from 'react-native';
 import {moderateScale, verticalScale} from 'react-native-size-matters';
-// import {LinearGradient} from 'expo-linear-gradient';
-import {Ionicons} from 'react-native-vector-icons';
+import {LinearGradient} from 'expo-linear-gradient';
+import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
 
 import {showToast} from '../../utils/Toast';
@@ -24,17 +24,17 @@ import {SubmitBtn} from '../../components/common';
 import {ScreenWrapper} from '../../components/layouts';
 import {images} from '../../assets/images';
 
-const RegisterDoctor = () => {
+const Register = () => {
+  const otpRefs = useRef([]);
+  const dispatch = useDispatch();
+  const navigate = useNavigation();
+
   const [isGetOtpClicked, setIsGetOtpClicked] = useState(false);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('');
   const [otp, setOtp] = useState(['', '', '', '', '', '']);
   const currentTheme = useSelector(state => state.theme.theme);
-  const dispatch = useDispatch();
-  const otpRefs = useRef([]);
-  const navigate = useNavigation();
-
   const handleOtpChange = (value, index) => {
     const newOtp = [...otp];
     newOtp[index] = value;
@@ -110,7 +110,7 @@ const RegisterDoctor = () => {
               style={styles.image}
               resizeMode="contain"
             />
-            {/* <LinearGradient
+            <LinearGradient
               colors={['rgba(255, 255, 255, 0)', 'rgba(255, 255, 255, 1)']}
               style={{
                 position: 'absolute',
@@ -118,7 +118,7 @@ const RegisterDoctor = () => {
                 width: '100%',
                 height: '50%',
               }}
-            /> */}
+            />
           </View>
 
           {/* Register Section */}
@@ -141,12 +141,10 @@ const RegisterDoctor = () => {
                       ? setIsGetOtpClicked(false)
                       : navigate.goBack();
                   }}>
-                  <Ionicons name="arrow-back" size={24} color="#000" />
+                  <Icon name="arrow-back" size={24} color="#000" />
                 </Pressable>
               </View>
-              <Text style={styles.registerTitle}>
-                {isGetOtpClicked ? 'Enter OTP ' : 'Register'}
-              </Text>
+              <Text style={styles.registerTitle}>Register</Text>
             </View>
             {!isGetOtpClicked ? (
               <>
@@ -215,7 +213,7 @@ const RegisterDoctor = () => {
                       alignItems: 'center',
                       gap: moderateScale(8),
                     }}>
-                    <Ionicons name="time" size={24} color="#00A8E8" />
+                    <Icon name="time" size={24} color="#00A8E8" />
                     <Text>time 0.00</Text>
                   </View>
                   <TouchableOpacity>
@@ -246,7 +244,7 @@ const RegisterDoctor = () => {
   );
 };
 
-export default RegisterDoctor;
+export default Register;
 
 const styles = StyleSheet.create({
   header: {

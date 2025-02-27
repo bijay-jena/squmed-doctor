@@ -1,4 +1,4 @@
-import LoginDoctor from './LoginDoctor';
-import RegisterDoctor from './RegisterDoctor';
+import Login from './Login';
+import Register from './Register';
 
-export {LoginDoctor, RegisterDoctor};
+export {Login, Register};

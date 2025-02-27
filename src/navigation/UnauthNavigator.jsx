@@ -1,6 +1,7 @@
 import React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
-import {LoginDoctor, RegisterDoctor} from '../screens/auth';
+import {Login, Register} from '../screens/auth';
+import routes from '../constants/routes';
 
 const UnauthNavigator = () => {
   const Stack = createNativeStackNavigator();
@@ -8,12 +9,12 @@ const UnauthNavigator = () => {
     <Stack.Navigator initialRouteName="Login">
       <Stack.Screen
         name="Login"
-        component={LoginDoctor}
+        component={Login}
         options={{headerShown: false}}
       />
       <Stack.Screen
-        name="Register"
-        component={RegisterDoctor}
+        name={routes.register}
+        component={Register}
         options={{headerShown: false}}
       />
     </Stack.Navigator>

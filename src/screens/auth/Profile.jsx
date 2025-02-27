@@ -19,6 +19,8 @@ import {
   resetAccount,
 } from '../../store/accountSlice';
 import {handleSyncFacilities} from '../../api';
+import globalStyles from '../../styles/globalStyles';
+import ZegoUIKitPrebuiltCallService from '@zegocloud/zego-uikit-prebuilt-call-rn';
 
 const Profile = () => {
   const dispatch = useDispatch();
@@ -36,6 +38,7 @@ const Profile = () => {
 
   const handleLogout = () => {
     dispatch(resetAccount());
+    ZegoUIKitPrebuiltCallService.uninit();
   };
 
   const handleTenantSelect = tenant => {
@@ -76,7 +79,7 @@ const Profile = () => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
+    <SafeAreaView style={globalStyles.flex1}>
       <View
         style={{
           margin: 15,
@@ -85,7 +88,7 @@ const Profile = () => {
           gap: 25,
         }}>
         <View style={{display: 'flex', flexDirection: 'row', gap: 10}}>
-          <TouchableOpacity onPress={() => navigation.goBack()}>
+          <TouchableOpacity onPress={navigation.goBack}>
             <Text>Go Back</Text>
           </TouchableOpacity>
         </View>

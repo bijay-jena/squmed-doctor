@@ -2641,6 +2641,16 @@
   resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.13.tgz#ff34942667a4e19a9f4a0996a76814daac364cf3"
   integrity sha512-lm2GW5PkosIzccsaZIz7tp8cPADSIlIHWDFTR1N0SzfinhhYgeIQjFMz4rYzanCScr3DqQLeomUDArp6MWKm+g==
 
+"@zegocloud/zego-uikit-prebuilt-call-rn@^6.3.2":
+  version "6.3.2"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-prebuilt-call-rn/-/zego-uikit-prebuilt-call-rn-6.3.2.tgz#338968f08a3595bc89c41ec91321f8a87ce3a60f"
+  integrity sha512-3DQGMbgulWQospG/y+PUvs7XzUxV5W5r3JQCP/3/MV5QEqjWzMtuaspBGGy6k8kJ+5QWKKJP7DQv+Ay8YYQLJw==
+
+"@zegocloud/zego-uikit-rn@^2.17.3":
+  version "2.17.3"
+  resolved "https://registry.yarnpkg.com/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.17.3.tgz#ad183bc6412a4326551584718c7971fd9d2eca18"
+  integrity sha512-y9Ez1saSOePqGzoKyqPcGa1KcMZRb9oKhhSuYZWRPKcZEjIglTnh8dgdexGbjgIBG5yIdaVo7mn1wXytqIR8qA==
+
 abort-controller@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/abort-controller/-/abort-controller-3.0.0.tgz#eaf54d53b62bae4138e809ca225c8439a6efb392"
@@ -4359,6 +4369,11 @@ expo-keep-awake@~14.0.3:
   version "14.0.3"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-14.0.3.tgz#74c91b68effdb6969bc1e8371621aad90386cfbf"
   integrity sha512-6Jh94G6NvTZfuLnm2vwIpKe3GdOiVBuISl7FI8GqN0/9UOg9E0WXXp5cDcfAG8bn80RfgLJS8P7EPUGTZyOvhg==
+
+expo-linear-gradient@~14.0.2:
+  version "14.0.2"
+  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-14.0.2.tgz#51fb266d1c7a38349077d243e383cc3d69d4356b"
+  integrity sha512-nvac1sPUfFFJ4mY25UkvubpUV/olrBH+uQw5k+beqSvQaVQiUfFtYzfRr+6HhYBNb4AEsOtpsCRkpDww3M2iGQ==
 
 expo-modules-autolinking@2.0.8:
   version "2.0.8"
@@ -7117,7 +7132,7 @@ prompts@^2.0.1, prompts@^2.3.2, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.6.0, prop-types@^15.6.2, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -7191,6 +7206,13 @@ rc@~1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-delegate-component@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-delegate-component/-/react-delegate-component-1.0.0.tgz#c17f9e15afbea4e1d83553bf960f17c8835aaf52"
+  integrity sha512-xdpNHPoiBQF0Ob4z5EqQUEK2sBjy0ooXe9xqsLlaA19l5dUASu3mIkfXMdBmMLCSfByPa0NluEN6BUDaI5EnlQ==
+  dependencies:
+    prop-types "^15.6.0"
+
 react-devtools-core@^5.3.1:
   version "5.3.2"
   resolved "https://registry.yarnpkg.com/react-devtools-core/-/react-devtools-core-5.3.2.tgz#d5df92f8ef2a587986d094ef2c47d84cf4ae46ec"
@@ -7245,6 +7267,11 @@ react-native-element-dropdown@^2.12.4:
   dependencies:
     lodash "^4.17.21"
 
+react-native-encrypted-storage@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/react-native-encrypted-storage/-/react-native-encrypted-storage-4.0.3.tgz#2a4d65459870511e8f4ccd22f02433dab7fa5e91"
+  integrity sha512-0pJA4Aj2S1PIJEbU7pN/Qvf7JIJx3hFywx+i+bLHtgK0/6Zryf1V2xVsWcrD50dfiu3jY1eN2gesQ5osGxE7jA==
+
 react-native-gesture-handler@^2.24.0:
   version "2.24.0"
   resolved "https://registry.yarnpkg.com/react-native-gesture-handler/-/react-native-gesture-handler-2.24.0.tgz#b6e1f13ec9bf8dfa5f4911854b6e0d73d882a81a"
@@ -7253,6 +7280,11 @@ react-native-gesture-handler@^2.24.0:
     "@egjs/hammerjs" "^2.0.17"
     hoist-non-react-statics "^3.3.0"
     invariant "^2.2.4"
+
+react-native-keep-awake@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/react-native-keep-awake/-/react-native-keep-awake-4.0.0.tgz#d89fdc3fb60b3cffa979ef37dc5816196df998a2"
+  integrity sha512-0Fotox+eLXQooeibVs3P60yASYUWjtRw9MZNmbuHt5UZQrgUrAKsE4jm7gTr4tPU1m1RkwGzcgUFpcOkh/ec7g==
 
 react-native-modal@^13.0.1:
   version "13.0.1"
@@ -7294,10 +7326,10 @@ react-native-safe-area-context@^5.2.0:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-context/-/react-native-safe-area-context-5.2.0.tgz#60a9faab2a6319a61411a652ed862ec0f59384be"
   integrity sha512-QpcGA6MRKe8Zbpf1hirCBudNQYGsMv0n/CTTROMOFcXbqRUoEXLCsYxUmYKi7JJb3ziL2DbyzWXyH2/gw4Tkfw==
 
-react-native-screens@^4.8.0:
-  version "4.8.0"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-4.8.0.tgz#e4e695df331824cc62c49c0237b754bfdf63540f"
-  integrity sha512-Y7fiUCOl+FhvfuvQVf6Fkla6C8Yh+pKVEZmflaikmRIm7JMdTxSkzSXQmnfDsV5BKR7dDWdlPf8/lm1QAIytNQ==
+react-native-screens@^4.9.1:
+  version "4.9.1"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-4.9.1.tgz#fc4e9fb6efd8351593ac026db02bfefc28434624"
+  integrity sha512-3pIOu1YXTDClQfkgk2t7rIr7unrV6bviaXRJsOq1APNHLeCPrJ6m5Gy3pW5Ty+XBm9jRAbMqhpjiXZIjesOR6A==
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
@@ -7311,6 +7343,11 @@ react-native-size-matters@^0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.4.2.tgz#4348bdd6fc47383f60326d58ad69870c998a5f9a"
   integrity sha512-DKE3f/sdcozd24oASgkP1iGg+YU3HoajRa5k3a4wkRzpiqREq8SGX12Y5zBgAt/8IivLQoTMYkyQu1/Giuy+zQ==
+
+react-native-sound@^0.11.2:
+  version "0.11.2"
+  resolved "https://registry.yarnpkg.com/react-native-sound/-/react-native-sound-0.11.2.tgz#e542dc5b9e16ab4b3ac7e6eaddb1fc8d98da9038"
+  integrity sha512-LmGc8lgOK3qecYMVQpyHvww/C+wgT6sWeMpVbOe4NCRGC2yKd4fo4U0KBUo9PO7AqKESO3I/2GZg1/C0+bwiiA==
 
 react-native-tab-view@^4.0.5:
   version "4.0.5"
@@ -9029,3 +9066,23 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.yarnpkg.com/yocto-queue/-/yocto-queue-0.1.0.tgz#0294eb3dee05028d31ee1a5fa2c556a6aaf10a1b"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zego-callkit-react-native@^1.0.6:
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/zego-callkit-react-native/-/zego-callkit-react-native-1.0.6.tgz#69d7bd34e4f6d73467fd1466605b36de5b16864d"
+  integrity sha512-a3RD/xfQRW4lgWyK3xr2/rb1x4Aiw+ypq22xw6Xz/JwmTCQFLCj/GwgUCucO3rXculxD72HmcH8R3G6SjWbYfg==
+
+zego-express-engine-reactnative@^3.19.0:
+  version "3.19.0"
+  resolved "https://registry.yarnpkg.com/zego-express-engine-reactnative/-/zego-express-engine-reactnative-3.19.0.tgz#745ed917883387863f4bd87287b5a0f5915ae630"
+  integrity sha512-tyxSiKexgQn+44FiBaJYDr+GkW4FJDEAB6rTBwKIkCWaakqggRQsoxjP07ezeXcnvyDqOWcqvFiT/X+xWZ8WMg==
+
+zego-zim-react-native@2.19.0:
+  version "2.19.0"
+  resolved "https://registry.yarnpkg.com/zego-zim-react-native/-/zego-zim-react-native-2.19.0.tgz#77b98d1069571c6c5ac46393c2851aca3d83b44b"
+  integrity sha512-xB3gaFdTh0X/OgkVIcRg/CpH6yV4ZLoZMGWFY2+fNpe/K9WmkcfaeyRMm7iWNGDldVxTP62cJu92Dbd5lG905A==
+
+zego-zpns-react-native@^2.6.6:
+  version "2.6.6"
+  resolved "https://registry.yarnpkg.com/zego-zpns-react-native/-/zego-zpns-react-native-2.6.6.tgz#b75b8d73f6e048ec6f457c791fbcc769149d5562"
+  integrity sha512-afoIwmqang1Ge08VeEhkkw9wnfoBSFZn9oZGKEK/48CNkqypbdD1LVFKoTYqOeXHpTsJwJxQwbTm21SzgZSosA==

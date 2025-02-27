@@ -3,6 +3,11 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Home from '../screens/home';
 import Profile from '../screens/auth/Profile';
 import {Conversational} from '../screens/diagnosis';
+import {
+  ZegoUIKitPrebuiltCallWaitingScreen,
+  ZegoUIKitPrebuiltCallInCallScreen,
+} from '@zegocloud/zego-uikit-prebuilt-call-rn';
+
 const Stack = createNativeStackNavigator();
 
 const AuthNavigator = () => {
@@ -23,6 +28,19 @@ const AuthNavigator = () => {
         component={Conversational}
         options={{headerShown: false}}
       />
+      <Stack.Screen
+        options={{headerShown: false}}
+        // DO NOT change the name
+        name="ZegoUIKitPrebuiltCallWaitingScreen"
+        component={ZegoUIKitPrebuiltCallWaitingScreen}
+      />
+      <Stack.Screen
+        options={{headerShown: false}}
+        // DO NOT change the name
+        name="ZegoUIKitPrebuiltCallInCallScreen"
+        component={ZegoUIKitPrebuiltCallInCallScreen}
+      />
+
       {/* <Stack.Screen
         name="Notifications"
         component={Notifications}

@@ -21,6 +21,8 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {ScreenWrapper} from '../../components/layouts';
 import EMRTabs from './EMRTabs';
 
+import {ZegoSendCallInvitationButton} from '@zegocloud/zego-uikit-prebuilt-call-rn';
+
 const Conversational = () => {
   const navigate = useNavigation();
   const route = useRoute();
@@ -41,7 +43,7 @@ const Conversational = () => {
       // Request permissions
       const {status} = await Audio.requestPermissionsAsync();
       if (status !== 'granted') {
-        alert('Permission to access microphone is required!');
+        Alert.alert('Permission to access microphone is required!');
         return;
       }
 
@@ -72,16 +74,16 @@ const Conversational = () => {
       setIsRecording(false);
 
       // Call API with base64 audio data
-      const response = await sendAudioToAPI(base64Audio);
-      setResponse(response);
+      const res = await sendAudioToAPI(base64Audio);
+      setResponse(res);
     } catch (err) {
       console.error('Failed to stop recording', err);
     }
   };
 
   const convertToBase64 = async uri => {
-    const response = await fetch(uri);
-    const blob = await response.blob();
+    const res = await fetch(uri);
+    const blob = await res.blob();
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
       reader.onloadend = () => {
@@ -95,11 +97,10 @@ const Conversational = () => {
 
   const sendAudioToAPI = async b64_str => {
     try {
-      const response = await axios.post(
-        'http://65.0.39.162:8000/conversation_ner',
-        {b64_str},
-      );
-      return response?.data ?? {}; // Adjust according to your API response structure
+      const res = await axios.post('http://65.0.39.162:8000/conversation_ner', {
+        b64_str,
+      });
+      return res?.data ?? {}; // Adjust according to your API response structure
     } catch (err) {
       console.error('API call failed', err);
       return 'Error processing audio';
@@ -107,7 +108,9 @@ const Conversational = () => {
   };
 
   const renderResponseSection = (title, dataArray) => {
-    if (title === 'status') return null;
+    if (title === 'status') {
+      return null;
+    }
 
     return (
       <View key={title} style={styles.sectionContainer}>
@@ -335,6 +338,11 @@ const Conversational = () => {
               <Icon name="arrow-back" size={24} color="#000" />
             </TouchableOpacity>
           </View>
+          <ZegoSendCallInvitationButton
+            invitees={[{userID: '7275158615', userName: 'John Doe'}]}
+            isVideoCall={true}
+            resourceID={'zego_call'} // Please fill in the resource ID name that has been configured in the ZEGOCLOUD's console here.
+          />
           <View style={styles.container}>
             {/* Patient Details Section */}
             <View style={styles.patientCard}>
