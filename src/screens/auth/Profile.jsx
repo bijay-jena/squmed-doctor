@@ -203,7 +203,7 @@ const Profile = () => {
             <View style={styles.modalContent}>
               <Text style={styles.modalTitle}>Select Tenant</Text>
               <View style={styles.listContainer}>
-                {doctor_profiles.map((tenant, index) => (
+                {doctor_profiles?.map((tenant, index) => (
                   <TouchableOpacity
                     key={index}
                     style={styles.listItem}
